@@ -1,0 +1,76 @@
+.section {
+  height: 100vh;
+  color: magenta;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.app-container {
+  background-color: #333;
+}
+
+.simplebar-scrollbar::before {
+  height: 100px;
+  background-color: red;
+}
+
+#elevator-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  flex-flow: row;
+}
+
+#left-door {
+  height: inherit;
+  width: 50vw;
+  background-color: grey;
+}
+
+#right-door {
+  height: inherit;
+  width: 50vw;
+  background-color: green;
+  position:relative;
+}
+
+#retro-button {
+  text-decoration: none;
+  display: inline-block;
+  min-width: 8.3vw;
+  min-height: 7vw;
+  line-height: 8.3vw;
+  font-size: 1.5em;
+  background-color: #444;
+  text-align: center;
+  color: #EFE0DF;
+  padding: 15px 10px;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: solid 2px #4a4a4a;
+  box-shadow: inset 1px 1px 5px #444, 1px 1px 3px #444, 2px 2px 1px #111, -1px -1px 3px #444, 2px 2px 4px #111;
+  &:hover {
+    background-image: radial-gradient(rgb(255, 136, 0), rgb(148, 121, 1), #444);
+  }
+}
+
+#button-container{
+  padding: 5px;
+  background-color: #303030;
+  display: block;
+  position: absolute;
+  border-radius: 8px;
+  border: solid 1px #414141;
+  box-shadow: inset 2px 2px 4px #000, inset -1px -1px 3px #444, 1px 1px 5px #2a2a2a;
+  z-index: 999;
+  overflow: hidden;
+  position:absolute;
+  bottom: 4%;
+  right: 4%;
+}
