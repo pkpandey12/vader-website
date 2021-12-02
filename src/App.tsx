@@ -1,19 +1,37 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { scrollSpy } from 'react-scroll';
+
 import './App.scss';
 import Navbar from './components/NavBar';
 import Section from './components/Section';
 import useScrollSnap from 'react-use-scroll-snap';
 import ElevatorDoors from './components/ElevatorDoors';
+import StreetView from './components/StreetView';
+
 const App = () => {
+
+  const [showElevator, setShowElevator] = useState(true);
+
+  const fromChildSetElevator = (val: boolean) => {
+    setShowElevator(val);
+  }
 
   const container = useRef(null);
 
   useScrollSnap({ ref: container, duration: 200, delay: 0 });
 
+
+  useEffect( () => {
+    console.log(scrollSpy.currentPositionY);
+  },[])
+
   return (
     <div id='container' ref={container} className={"app-container"}>
     {/* <Navbar /> */}
-    <ElevatorDoors/>
+    {showElevator &&
+    <ElevatorDoors func={fromChildSetElevator}/>
+    }
+    <StreetView/>
     <Section
       title="Section 1"
       subtitle={"dummyText"}
