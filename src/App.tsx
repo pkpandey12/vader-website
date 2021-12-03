@@ -2,18 +2,22 @@ import React, { useEffect, useRef, useState } from 'react';
 import { scrollSpy } from 'react-scroll';
 
 import './App.scss';
-import Navbar from './components/NavBar';
-import Section from './components/Section';
 import useScrollSnap from 'react-use-scroll-snap';
 import ElevatorDoors from './components/ElevatorDoors';
 import StreetView from './components/StreetView';
+import Bar from './components/Bar';
 
 const App = () => {
 
   const [showElevator, setShowElevator] = useState(true);
+  const [showCover, setShowCover] = useState(false);
 
   const fromChildSetElevator = (val: boolean) => {
     setShowElevator(val);
+  }
+
+  const fromChildShowCoverOnStreet = (val: boolean) => {
+   setShowCover(val); 
   }
 
   const container = useRef(null);
@@ -26,43 +30,19 @@ const App = () => {
   },[])
 
   return (
-    <div id='container' ref={container} className={"app-container"}>
-    {/* <Navbar /> */}
+    <div  className={"app-container"}>
     {showElevator &&
-    <ElevatorDoors func={fromChildSetElevator}/>
+      <ElevatorDoors func={fromChildSetElevator} func2={fromChildShowCoverOnStreet}/>
     }
+    
+    <div id='container' ref={container}>
+    {/* <Navbar /> */}
+    { showCover &&
     <StreetView/>
-    <Section
-      title="Section 1"
-      subtitle={"dummyText"}
-      dark={true}
-      id="section1"
-    />
-
-    <Section
-      title="Section 2"
-      subtitle={"dummyText"}
-      dark={false}
-      id="section2"
-    />
-    <Section
-      title="Section 3"
-      subtitle={"dummyText"}
-      dark={true}
-      id="section3"
-    />
-    <Section
-      title="Section 4"
-      subtitle={"dummyText"}
-      dark={false}
-      id="section4"
-    />
-    <Section
-      title="Section 5"
-      subtitle={"dummyText"}
-      dark={true}
-      id="section5"
-    />
+    }
+    {showCover &&
+      <Bar/>}
+  </div>
   </div>
   )
 }

@@ -18,14 +18,15 @@ const ElevatorDoors = (props?:any) => {
       <Fade right when={!doorsOpen}>
       <div id ="right-door">
         <div id='button-placement-helper'>
-        <div id="button-container">
+        <div className="button-container">
           <div id="retro-button" onClick={()=>{
+            props?.func2(true);
             setDoorsOpen(true)
-            scroller.scrollTo('streeview-navigator', {
+            setTimeout(function(){scroller.scrollTo('streeview-navigator', {
               duration: 1500,
               delay: 100,
               smooth: true}
-            )
+            )}, 1000);
             setTimeout(function(){
               props?.func(false);
             },5000); 
