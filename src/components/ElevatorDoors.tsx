@@ -22,7 +22,7 @@ const ElevatorDoors = (props?:any) => {
           <div id="retro-button" onClick={()=>{
             props?.func2(true);
             setDoorsOpen(true)
-            setTimeout(function(){scroller.scrollTo('streeview-navigator', {
+            setTimeout(function(){scroller.scrollTo('streetview-navigator', {
               duration: 1500,
               delay: 100,
               smooth: true}
