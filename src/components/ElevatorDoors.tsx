@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import {scroller} from "react-scroll";
 
 const ElevatorDoors = (props?:any) => {
@@ -17,9 +18,12 @@ const ElevatorDoors = (props?:any) => {
       </Fade>
       <Fade right when={!doorsOpen}>
       <div id ="right-door">
-        <div id='button-placement-helper'>
+      </div>
+      </Fade>
+      <div id='button-placement-helper'>
         <div className="button-container">
-          <div id="retro-button" onClick={()=>{
+        <Zoom bottom opposite when={!doorsOpen}>
+          <div className='elevator-button' onClick={()=>{
             props?.func2(true);
             setDoorsOpen(true)
             setTimeout(function(){scroller.scrollTo('streetview-navigator', {
@@ -31,12 +35,10 @@ const ElevatorDoors = (props?:any) => {
               props?.func(false);
             },5000); 
             }}>
-                Enter
           </div>
+        </Zoom>
         </div>
       </div>
-      </div>
-      </Fade>
     </div>
   );
 };

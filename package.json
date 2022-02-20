@@ -24,6 +24,7 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
+    "react-sticky-mouse-tooltip": "^0.0.1",
     "react-use-scroll-snap": "^0.0.3",
     "sass": "^1.44.0",
     "simplebar-react": "^2.3.6",

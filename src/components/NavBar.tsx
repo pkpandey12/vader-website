@@ -11,13 +11,16 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import {scroller} from "react-scroll";
+import {
+  connectWallet,
+  getCurrentWalletConnected
+} from "../services/metaMaskServices";
 
 const NavBar = (props: any) => {
 
-  const setIsOpen = props.setIsOpen;
-  const connectWallet = props.connectWallet;
   const setWallet = props.setWallet;
   const walletAddress = props.walletAddress;
+  const mintable = props.mintable;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -35,7 +38,7 @@ const NavBar = (props: any) => {
   };
 
   return (
-    <AppBar position="sticky" style={{ background: 'transparent', boxShadow: 'none'}}>
+    <AppBar style={{ background: 'transparent', boxShadow: 'none'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -86,13 +89,18 @@ const NavBar = (props: any) => {
                 }}>
                   <Typography textAlign="center">Home</Typography>
                 </MenuItem>
-                <MenuItem key={'mint'} onClick={()=>{
+                { mintable &&
+                  <MenuItem key={'mint'} onClick={()=>{
                   handleCloseNavMenu()
-                  setIsOpen(true)
+                  scroller.scrollTo('my-modal', {
+                    duration: 1500,
+                    delay: 100,
+                    smooth: true}
+                  )
                   }
                 }>
                   <Typography textAlign="center">Mint</Typography>
-                </MenuItem>
+                </MenuItem>}
                 <MenuItem key={'about'} onClick={()=>{
                   handleCloseNavMenu();
                   scroller.scrollTo('bar-container', {
@@ -135,7 +143,11 @@ const NavBar = (props: any) => {
                 key={'Mint'}
                 onClick={()=>{
                   handleCloseNavMenu()
-                  setIsOpen(true)
+                  scroller.scrollTo('my-modal', {
+                    duration: 1500,
+                    delay: 100,
+                    smooth: true}
+                  )
                   }
                 }
                 sx={{ my: 2, color: 'white', display: 'block' }}
