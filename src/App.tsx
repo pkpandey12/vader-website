@@ -10,6 +10,9 @@ import Navbar from './components/NavBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Button, createTheme, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, ThemeProvider, useMediaQuery } from '@mui/material';
 import Mint from './components/Mint';
+import Roadmap from './components/Roadmap';
+
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const App = () => {
@@ -77,6 +80,7 @@ const App = () => {
 
   useScrollSnap({ ref: container, duration: 200, delay: 0 });
 
+  // document.body.style.overflow = "hidden";
 
   useEffect( () => {
     console.log(scrollSpy.currentPositionY);
@@ -130,6 +134,9 @@ const App = () => {
           }
         {showCover &&
           <Bar/>}
+        {showCover &&
+        <Roadmap/>
+        }
 
     </div>
     </div>

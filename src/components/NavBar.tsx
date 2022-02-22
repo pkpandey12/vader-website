@@ -16,6 +16,12 @@ import {
   getCurrentWalletConnected
 } from "../services/metaMaskServices";
 
+import loomlogo from '../assets/loomlogo.svg'
+import { Icon } from '@mui/material';
+
+import MouseTooltip from 'react-sticky-mouse-tooltip';
+
+
 const NavBar = (props: any) => {
 
   const setWallet = props.setWallet;
@@ -23,6 +29,7 @@ const NavBar = (props: any) => {
   const mintable = props.mintable;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [logoHover, setLogoHover] = React.useState(false);
 
   const handleOpenNavMenu = (event: any) => {
     setAnchorElNav(event.currentTarget);
@@ -41,148 +48,26 @@ const NavBar = (props: any) => {
     <AppBar style={{ background: 'transparent', boxShadow: 'none'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            LOGO
-          </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon/>
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >   
-                <MenuItem key={'home'} onClick={()=>{
+          
+          <Box alignItems="center" justifyContent="center" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <MouseTooltip
+                    visible={logoHover}
+                    offsetX={15}
+                    offsetY={10}
+                  >
+                    <span className="tooltip-text-logo">The Street</span>
+                  </MouseTooltip>
+          <img className='logo-icon' alt='discord' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                   handleCloseNavMenu();
                   scroller.scrollTo('streetview-navigator', {
                     duration: 1500,
                     delay: 100,
                     smooth: true}
                   )
-                }}>
-                  <Typography textAlign="center">Home</Typography>
-                </MenuItem>
-                { mintable &&
-                  <MenuItem key={'mint'} onClick={()=>{
-                  handleCloseNavMenu()
-                  scroller.scrollTo('my-modal', {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true}
-                  )
-                  }
-                }>
-                  <Typography textAlign="center">Mint</Typography>
-                </MenuItem>}
-                <MenuItem key={'about'} onClick={()=>{
-                  handleCloseNavMenu();
-                  scroller.scrollTo('bar-container', {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true}
-                  )
-                }}>
-                  <Typography textAlign="center">About</Typography>
-                </MenuItem>
-                <MenuItem key={'roadmap'} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Roadmap</Typography>
-                </MenuItem>
-            </Menu>
+                }}/>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          <Button
-                key={'home'}
-                onClick={()=>{
-                  handleCloseNavMenu();
-                  scroller.scrollTo('streetview-navigator', {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true}
-                  )
-                }}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Home
-          </Button>
-          <Button
-                key={'Mint'}
-                onClick={()=>{
-                  handleCloseNavMenu()
-                  scroller.scrollTo('my-modal', {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true}
-                  )
-                  }
-                }
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Mint
-          </Button>
-          <Button
-                key={'about'}
-                onClick={()=>{
-                  handleCloseNavMenu()
-                  scroller.scrollTo('bar-container', {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true}
-                  )
-                }}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                About
-          </Button>
-          <Button
-            key={'roadmap'}
-            onClick={handleCloseNavMenu}
-            sx={{ my: 2, color: 'white', display: 'block' }}
-          >
-            Roadmap
-          </Button>
-          </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            
-            <Button variant='outlined' onClick={connectWalletPressed}>
-            {walletAddress === "" && "Connect Wallet"}
-            {walletAddress !== "" && walletAddress}
-            </Button>
-          </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>

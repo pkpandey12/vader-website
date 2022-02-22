@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=IM+Fell+English+SC&family=Vollkorn+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=IM+Fell+English:ital@1&family=Vollkorn+SC:wght@700&display=swap');
 .section {
   height: 100vh;
   color: magenta;
@@ -254,6 +254,16 @@
   border-radius: 10%;
   opacity: 80%;
 }
+.tooltip-text-logo {
+  font-family: 'Vollkorn SC', serif;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #000;
+  background-color: rgb(255, 255, 255, 1);
+  border: white 5px solid;
+  border-radius: 10%;
+  opacity: 80%;
+}
 
 .mint-container {
   height: 100vh;
@@ -270,6 +280,7 @@
 #left-mint {
   height: 100vh;
   width: 50vw;
+  cursor: pointer;
 }
 
 .final-card-container {
@@ -321,7 +332,148 @@
   transform: rotateY(0deg);
 }
 
+#roadmap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 0;
 
+}
+.logo-icon {
+  width: 10%;
+  opacity: 80%;
+  cursor: pointer;
+  &:hover {
+    opacity: 100%;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.53687412464986) 20%, rgba(255,255,255,0) 38%);
+  }
+}
+
+#roadmap-section-container {
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.roadmap-section {
+  width: 19vw;
+  height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &:hover {
+    background-color: #000;
+    // -webkit-box-shadow: 2px 5px 16px 0px #525252, 0px 0px 32px 13px rgba(255,255,255,0.34); 
+    // box-shadow: 2px 5px 16px 0px #525252, 0px 0px 32px 13px rgba(255,255,255,0.34);
+  }
+}
+
+.roadmap-section-date {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'DM Serif Display', serif;
+  opacity: 50%;
+}
+
+.roadmap-section-title {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  font-family: 'Vollkorn SC', serif;
+  font-size: 2.5em;
+}
+
+.roadmap-section-body {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: justify;
+  text-justify: auto;
+  font-family: 'IM Fell English', serif;
+  font-size: 1.5em;
+}
+
+.roadmap-section-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.roadmap-section-image {
+  width: 98%;
+  margin: auto;
+}
+
+/* Stars 
+------------------------------------- */
+
+#space, .stars {
+  z-index: -999999999;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 160px, #ddd, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 160px 120px, #ddd, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  } 
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
 
 
 @media (max-aspect-ratio: 176/100){
@@ -357,6 +509,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment:fixed ;
+  cursor: pointer;
 }
 
 .street-sec-adjustor{
@@ -452,3 +605,4 @@
 }
 
 }
+

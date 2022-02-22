@@ -1,20 +1,23 @@
 import React from 'react';
 
+import MouseTooltip from 'react-sticky-mouse-tooltip';
+
 const Mint = () => {
+
+  const [showTooltip, setShow] = React.useState(false);
+
   return(
-    <div id="mint-container" >
+    <div id="mint-anchor" >
     <div className='mint-container'>
-      <div id='left-mint'>
-        <div className='final-card-container'>
-          <div className="card">
-            <div className="card-side front">
-              <div>Front Side</div>
-            </div>
-            <div className="card-side back">
-              <div>Back Side</div>
-            </div>
-          </div>
-        </div>
+      <div id='left-mint' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
+        <MouseTooltip
+                    visible={showTooltip}
+                    offsetX={15}
+                    offsetY={10}
+                  >
+                    <span className="tooltip-text">Coming Soon!</span>
+        </MouseTooltip>
+        
       </div>
     </div>
     </div>

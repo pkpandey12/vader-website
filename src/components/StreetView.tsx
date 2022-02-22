@@ -70,7 +70,14 @@ const StreetView = (props?: any) => {
             </div>
             </div>
             <div className="street-sec-adjustor">
-            <div id='street-sec' onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl' : "bar-section") : ''}>
+            <div onClick={()=>{
+              scroller.scrollTo('roadmap', {
+                duration: 1500,
+                delay: 100,
+                smooth: true}
+              )
+            }}
+            id='street-sec' onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl' : "bar-section") : ''}>
             <MouseTooltip
               visible={roadmapXL}
               offsetX={15}
