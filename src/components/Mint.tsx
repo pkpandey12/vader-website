@@ -20,21 +20,21 @@ const Mint = () => {
   const setMessage = () => {
     switch(truth){
       case 0:
-        return <div style={{fontFamily: 'VT323, monospace', fontSize: '25rem'}}>OTW</div>
+        return <div style={{fontFamily: 'VT323, monospace', fontSize: '25vw'}}>OTW</div>
       case 1:
-        return <div style={{fontFamily: 'Poppins, sans-serif', fontSize: '15rem'}}>जल्द ही</div>
+        return <div style={{fontFamily: 'Poppins, sans-serif', fontSize: '10vw'}}>जल्द ही</div>
       case 2:
-        return  <div style={{fontFamily: 'Black Han Sans, sans-serif', fontSize: '20rem'}}>곧 출시</div>
+        return  <div style={{fontFamily: 'Black Han Sans, sans-serif', fontSize: '10vw'}}>곧 출시</div>
       case 3:
-        return <div style={{fontFamily: 'DotGothic16, sans-serif', fontSize: '13rem'}}>即將上市</div>
+        return <div style={{fontFamily: 'DotGothic16, sans-serif', fontSize: '9vw'}}>即將上市</div>
       case 4:
-        return <div style={{fontFamily: 'Reem Kufi, sans-serif', fontSize: '20rem'}}>قريبا</div>
+        return <div style={{fontFamily: 'Reem Kufi, sans-serif', fontSize: '20vw'}}>قريبا</div>
       case 5:
-        return <div style={{fontFamily: 'VT323, monospace', fontSize: '25rem'}}>OTW</div>
+        return <div style={{fontFamily: 'VT323, monospace', fontSize: '25vw'}}>OTW</div>
       case 6:
-        return <div style={{fontFamily: 'DotGothic16, sans-serif', fontSize: '20rem'}}>OTW</div>
+        return <div style={{fontFamily: 'DotGothic16, sans-serif', fontSize: '20vw'}}>OTW</div>
       default:
-        return <div style={{fontFamily: 'VT323, monospace', fontSize: '25rem'}}>OTW</div>
+        return <div style={{fontFamily: 'VT323, monospace', fontSize: '25vw'}}>OTW</div>
     }
   }
 

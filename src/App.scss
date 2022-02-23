@@ -167,6 +167,7 @@
   background-color: black;
   width: 20vw;
   height: 100vh;
+  cursor: pointer;
 }
 
 #bar-rest-sec {
@@ -191,6 +192,7 @@
 .focus-left {
   background: rgb(0,0,0);
   background: linear-gradient(270deg, rgba(0,0,0,1) 64%, rgba(0,0,0,0) 100%) !important;
+  cursor: pointer;
 }
 
 .focus-left-sec {
@@ -210,11 +212,10 @@
 }
 
 #exposition-container {
-  width: 33vw;
+  width: 33 vw;
   height: 75vh;
   background-color: rgb(0, 0, 0, 0);
   margin: auto;
-  box-shadow: rgba(50, 50, 93, 0.742) 0px 30px 60px -12px, rgb(0 0 0 / 28%) 0px 18px 36px -18px;
 }
 
 #exposition-headline {
@@ -388,6 +389,7 @@
   justify-content: center;
   cursor: pointer;
   &:hover {
+    background-color: #000;
     box-shadow: rgb(50 50 93 / 20%) 0px 30px 60px -12px, rgb(0 0 0 / 28%) 0px 18px 36px -18px;
   }
     // -webkit-box-shadow: 2px 5px 16px 0px #525252, 0px 0px 32px 13px rgba(255,255,255,0.34); 
@@ -424,7 +426,7 @@
   margin-bottom: 1vh;
   text-align: center;
   font-family: 'Vollkorn SC', serif;
-  font-size: 4em;
+  font-size: 4vw;
 }
 
 .expo-section-body {
@@ -433,7 +435,24 @@
   text-align: justify;
   text-justify: auto;
   font-family: 'IM Fell English', serif;
-  font-size: 2em;
+  font-size: 1.5em;
+  display: inline;
+}
+
+.expo-section-quote {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1em;
+  color: rgb(135, 135, 135);
+}
+
+.quote-attr {
+  width: 27vw;
+  font-weight: 700;
+  margin-top: 3%;
+  text-align: right !important;
 }
 
 .roadmap-section-image-container {
@@ -642,4 +661,13 @@
   background-attachment:fixed ;
 }
 
+}
+
+.image-root {
+  text-align: center;
+}
+
+.image-icon {
+  height: 100%;
+  width: 100%;
 }

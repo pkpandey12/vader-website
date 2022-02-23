@@ -129,11 +129,12 @@ const App = () => {
         <StreetView
           setIsOpen={fromChildOpenModal}/>
         }
+        {showCover &&
+          <Bar/>}
+
         {showCover && 
            <Mint/>
           }
-        {showCover &&
-          <Bar/>}
         {showCover &&
         <Roadmap/>
         }

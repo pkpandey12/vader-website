@@ -22,6 +22,26 @@ import { Icon } from '@mui/material';
 import Spin from 'react-reveal/Spin';
 import MouseTooltip from 'react-sticky-mouse-tooltip';
 
+import discord from '../assets/discord.svg'
+import metamask from '../assets/metamask.svg';
+
+
+function DiscordIcon() {
+  return (
+    <Icon className='image-root'>
+      <img className='image-icon' alt='discord' src={discord}/>
+    </Icon>
+  );
+}
+
+function MetaMaskIcon() {
+  return (
+    <Icon className='image-root'>
+      <img className='image-icon' alt='metamask' src={metamask}/>
+    </Icon>
+  );
+}
+
 
 const NavBar = (props: any) => {
 
@@ -59,7 +79,15 @@ const NavBar = (props: any) => {
                   >
                     <span className="tooltip-text-logo">The Street</span>
                   </MouseTooltip>
-          
+                  <IconButton
+              size="large"
+              edge="end"
+              aria-label="discord"
+              color="inherit"
+              onClick={()=> window.open(`https://discord.gg/PwFK7s6b`, "_blank")}
+            >
+              <DiscordIcon/>
+            </IconButton>
           <Spin when={logoHover}>
             <img className='logo-icon' alt='discord' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
@@ -71,6 +99,14 @@ const NavBar = (props: any) => {
                   }}
             />
           </Spin>
+          <IconButton
+              size="large"
+              edge="end"
+              aria-label="metamask"
+              color="inherit"
+            >
+              <MetaMaskIcon/>
+            </IconButton>
           </Box>
           
         </Toolbar>
