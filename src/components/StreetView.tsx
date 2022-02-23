@@ -38,7 +38,7 @@ const StreetView = (props?: any) => {
           <div id='street-section-container'>
             <div onClick={()=>{
               scroller.scrollTo('mint-container', {
-                duration: 1500,
+                duration: 500,
                 delay: 100,
                 smooth: true}
               )
@@ -72,7 +72,7 @@ const StreetView = (props?: any) => {
             <div className="street-sec-adjustor">
             <div onClick={()=>{
               scroller.scrollTo('roadmap', {
-                duration: 1500,
+                duration: 500,
                 delay: 100,
                 smooth: true}
               )

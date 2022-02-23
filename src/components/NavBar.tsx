@@ -19,6 +19,7 @@ import {
 import loomlogo from '../assets/loomlogo.svg'
 import { Icon } from '@mui/material';
 
+import Spin from 'react-reveal/Spin';
 import MouseTooltip from 'react-sticky-mouse-tooltip';
 
 
@@ -58,14 +59,18 @@ const NavBar = (props: any) => {
                   >
                     <span className="tooltip-text-logo">The Street</span>
                   </MouseTooltip>
-          <img className='logo-icon' alt='discord' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
-                  handleCloseNavMenu();
-                  scroller.scrollTo('streetview-navigator', {
-                    duration: 1500,
-                    delay: 100,
-                    smooth: true}
-                  )
-                }}/>
+          
+          <Spin when={logoHover}>
+            <img className='logo-icon' alt='discord' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
+                    handleCloseNavMenu();
+                    scroller.scrollTo('streetview-navigator', {
+                      duration: 500,
+                      delay: 100,
+                      smooth: true}
+                    )
+                  }}
+            />
+          </Spin>
           </Box>
           
         </Toolbar>

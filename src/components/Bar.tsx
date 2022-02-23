@@ -24,6 +24,8 @@ const Bar = () => {
     }
   }
 
+  const [expo, setExpo] = React.useState(false)
+
   return (
     <div id="bar-container">
       <div className='bar-sec-container'>
@@ -54,22 +56,49 @@ const Bar = () => {
           rest: '100%'
         })} onMouseLeave={()=>setChangeBackground(defaultBackGroundState)} style={{opacity: changeBackground.sec3 !=='0%'? changeBackground.sec3 : '0%'}}>
         </div>
-        <div id='bar-rest-sec' className={isSectionActive(3)?'focus-left-sec': ''} 
-          style={{opacity: changeBackground.rest !=='0%'? changeBackground.rest : '0%'}}>
+        <div id='bar-rest-sec' className={isSectionActive(3) && expo?'focus-left-sec': ''} 
+          style={{opacity: expo && (!isSectionActive(1) || !isSectionActive(2) || !isSectionActive(3))? '100%' : '0%'}}
+          onMouseEnter={()=>setExpo(false)} onMouseLeave={()=>setExpo(true)}>
             <div id="exposition-container-container">
-              <Fade right when={isSectionActive(1)}>
+              <Fade when={expo}>
                 <div id='exposition-container'>
                   
+                <div className = 'expo-section-title'>
+                  {isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
+                  <Fade>
+                    0xCurry
+                  </Fade>
+                  }
+                  {isSectionActive(2) && (!isSectionActive(1) && !isSectionActive(3))&& expo && 
+                  <Fade>
+                    Surokara
+                  </Fade>
+                  }
+                  {isSectionActive(3) && (!isSectionActive(2) && !isSectionActive(1)) && expo && 
+                  <Fade>
+                    St. Prometheus
+                  </Fade>
+                  }
                 </div>
-              </Fade>
-              <Fade right when={isSectionActive(2)}>
-                <div id='exposition-container'>
-                  
+                
+                <div className='expo-section-body'>
+                {isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
+                  <Fade>
+                    Veneral disease king
+                  </Fade>
+                  }
+                  {isSectionActive(2) && (!isSectionActive(1) && !isSectionActive(3)) && expo && 
+                  <Fade>
+                    Penis man
+                  </Fade>
+                  }
+                  {isSectionActive(3) && (!isSectionActive(2) && !isSectionActive(1)) && expo && 
+                  <Fade>
+                    Lil cum slut
+                  </Fade>
+                  }
                 </div>
-              </Fade>
-              <Fade right when={isSectionActive(3)}>
-                <div id='exposition-container'>
-                  
+
                 </div>
               </Fade>
             </div>
