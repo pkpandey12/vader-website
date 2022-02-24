@@ -435,7 +435,7 @@
   text-align: justify;
   text-justify: auto;
   font-family: 'IM Fell English', serif;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   display: inline;
 }
 
@@ -444,7 +444,7 @@
   margin-right: 1vw;
   text-align: center;
   font-family: 'DM Serif Display', serif;
-  font-size: 1em;
+  font-size: 1vw;
   color: rgb(135, 135, 135);
 }
 
@@ -531,7 +531,7 @@
   }
 }
 
-// If screen exceeds this aspect ratio, i.e. more than 16/9
+// If screen is less than this aspect ratio, i.e. less than 16/9
 @media (max-aspect-ratio: 176/100){
   .background-loader {
     background-image: url('./assets/Street_Scene-min.png');
@@ -592,6 +592,35 @@
 }
 
 @media (min-aspect-ratio: 179/100){
+
+
+.expo-section-title {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  font-family: 'Vollkorn SC', serif;
+  font-size: 4rem;
+}
+
+.expo-section-body {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: justify;
+  text-justify: auto;
+  font-family: 'IM Fell English', serif;
+  font-size: 2rem;
+  display: inline;
+}
+
+.expo-section-quote {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.75rem;
+  color: rgb(135, 135, 135);
+}
+
   .background-loader {
     background-image: url('./assets/Street_Scene-min.png');
     background-position: center;
