@@ -75,13 +75,13 @@ const Bar = () => {
                 <div className = 'expo-section-title'>
                   {isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
                   <Fade>
-                    LoomRaiders
+                    The Loom
                   </Fade>
                   }
                   {isSectionActive(2) && (!isSectionActive(1) && !isSectionActive(3))&& expo && 
                   <Fade>
-                    <span >
-                      3333
+                    <span style={{fontSize: '3vw'}}>
+                      3333 LoomRaiders
                     </span>
                   </Fade>
                   }
@@ -95,24 +95,29 @@ const Bar = () => {
                 <div className='expo-section-body'>
                 {isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
                   <Fade>
-                    Are multiversal beings drawn from their home realities to Tantalus in search of The Loom.
-                    <br/>
                     When scientists on the worldcity of Tantalus unlocked string theory, they realized they could weave together
-                    infinity into universes like a loom creates fabric from strings. However, infinity comes around...
+                    infinity into universes like a loom creates fabric from strings. Hence, they called it The Loom. However, infinity comes with a proportional cost.
+                    <br/>
+                    Along with infinite resources, beings of extraordinary, godlike power began seeping through the cracks. They were 
+                    simultaneously created by the loom and driven to seek it out. In their eyes, they had lived full lives, and this Loom had ripped their universes asunder.
                   </Fade>
                   }
                   {isSectionActive(2) && (!isSectionActive(1) && !isSectionActive(3)) && expo && 
                   <Fade>
-                    Raiders are coming for The Loom for one reason or the other. There's a war coming. We convinced some raiders to switch sides and fight their vicious brethren.
+                    are coming for The Loom for one reason or the other. The world of Tantalus has grown used to their presence, and many raiders have joined society for its betterment.
+                    The raiders now live in a comparitively egalitarian society, where all of their exotic existences have made Tantalus the heart of metaversal culture.
                     <br/>
-                    There are 54 species with different versions from various timelines. The universe has been painstakingly handmade for your tactical reference.
+                    There are 54 species with different versions from various timelines. Some of them have rare Titan genes that set them apart from their peers. The universe has been painstakingly handmade for your tactical reference.
                   </Fade>
                   }
                   {isSectionActive(3) && (!isSectionActive(2) && !isSectionActive(1)) && expo && 
                   <Fade>
-                    Is a place where dreams are real. The Loom Society is a group of extraordinary individuals who have come together to defend the Loom and Tantalus.
+                    Is a place where dreams are real, but so are nightmares. With so many Raiders about, the world can be a dangerous place. 
+                    The Loom Society is a group of extraordinary individuals who have come together to defend the Loom and Tantalus from the many threats it faces.
                     <br/>
-                    You can join, and defend - or you can defect, and annihilate. The choice is yours, but you'll need help either way. 
+                    The world is infinite, and you decided what happens to it.
+                    On Tantalus, your choices matter. On Tantalus, you can be anything. You can join, and defend - or you can defect, and annihilate.
+                    The choice is yours, but you'll need help either way. 
                     Fortunately, help is available.
                       <br/>
                   </Fade>
@@ -123,21 +128,21 @@ const Bar = () => {
                   {
                   isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
                     <Fade>
-                      "I like to move it, move it"
+                      "I should be building but I can't stop aping into NFTs"
                       <div className='quote-attr'>- 0xCurry, Code and Business</div>
                     </Fade>
                   }
                   {
                   isSectionActive(2) && (!isSectionActive(1) && !isSectionActive(3)) && expo && 
                     <Fade>
-                      "I like to move it, move it"
+                      "Stay strapped or get clapped"
                       <div className='quote-attr'>- Surokara, Art and Concepts</div>
                     </Fade>
                   }
                   {
                   isSectionActive(3) && (!isSectionActive(2) && !isSectionActive(1)) && expo &&  
                     <Fade>
-                      "When times get tough, I put on my VR goggles to oggle at the metaverse so I can forget I live in a cardboard box"
+                      "I used to be a communist until I started making money"
                       <div className='quote-attr'>- St. Prometheus, Code and Story</div>
                     </Fade>
                   }

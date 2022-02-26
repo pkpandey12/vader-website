@@ -12,32 +12,23 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import {scroller} from "react-scroll";
 import {
-  connectWallet,
-  getCurrentWalletConnected
+  connectWallet
 } from "../services/metaMaskServices";
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
-import loomlogo from '../assets/loomlogo.svg'
+import loomlogo from '../assets/white-loomlogo.svg'
 import { Icon } from '@mui/material';
 
 import Spin from 'react-reveal/Spin';
 import MouseTooltip from 'react-sticky-mouse-tooltip';
 
 import discord from '../assets/discord.svg'
-import metamask from '../assets/metamask.svg';
 
 
 function DiscordIcon() {
   return (
     <Icon className='image-root'>
       <img className='image-icon' alt='discord' src={discord}/>
-    </Icon>
-  );
-}
-
-function MetaMaskIcon() {
-  return (
-    <Icon className='image-root'>
-      <img className='image-icon' alt='metamask' src={metamask}/>
     </Icon>
   );
 }
@@ -61,8 +52,12 @@ const NavBar = (props: any) => {
 
   const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
-    alert(walletResponse.status);
     setWallet(walletResponse.address);
+    scroller.scrollTo('mint-anchor', {
+      duration: 500,
+      delay: 100,
+      smooth: true}
+    )
   };
 
   return (
@@ -89,7 +84,7 @@ const NavBar = (props: any) => {
               <DiscordIcon/>
             </IconButton>
           <Spin when={logoHover}>
-            <img className='logo-icon' alt='discord' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
+            <img className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
                     scroller.scrollTo('streetview-navigator', {
                       duration: 500,
@@ -101,11 +96,12 @@ const NavBar = (props: any) => {
           </Spin>
           <IconButton
               size="large"
-              edge="end"
+              edge="start"
               aria-label="metamask"
               color="inherit"
+              onClick={()=>connectWalletPressed()}
             >
-              <MetaMaskIcon/>
+              <AccountBalanceWalletIcon/>
             </IconButton>
           </Box>
           

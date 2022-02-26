@@ -40,7 +40,26 @@ const Roadmap = (props?: any) => {
           <div className="stars"></div>
           <div className="stars"></div>
         </div>
+
           <div id="roadmap-section-container">
+
+        <div className="roadmap-section" onMouseEnter={()=>setAnim2(true)} onMouseLeave={()=>setAnim2(false)}>
+              <Fade down when={animate2}>
+                <div className='roadmap-section-date'>
+                  Mid 2022
+                </div>
+              </Fade>
+              <div className="roadmap-section-image-container">
+                <img className='roadmap-section-image' src={conciser(2)} alt='alpha hub' />
+              </div>
+              <Fade up when={animate2}>
+                <div className = 'roadmap-section-title'>
+                  Alpha Hub
+                </div>
+                <div className='roadmap-section-body'>
+                Neurodive into alpha regarding NFTs and Hot new projects in the crypto space                </div>
+              </Fade>
+            </div>
             <div className="roadmap-section" onMouseEnter={()=>setAnim0(true)} onMouseLeave={()=>setAnim0(false)}>
               <Fade down when={animate0}>
                 <div className='roadmap-section-date'>
@@ -75,25 +94,6 @@ const Roadmap = (props?: any) => {
                 </div>
                 <div className='roadmap-section-body'>
                   Collaborative, wearable art, from our minds to our fashion, all thanks to the magic of supply-side econ.
-                </div>
-              </Fade>
-            </div>
-
-            <div className="roadmap-section" onMouseEnter={()=>setAnim2(true)} onMouseLeave={()=>setAnim2(false)}>
-              <Fade down when={animate2}>
-                <div className='roadmap-section-date'>
-                  Late 2022
-                </div>
-              </Fade>
-              <div className="roadmap-section-image-container">
-                <img className='roadmap-section-image' src={conciser(2)} alt='alpha hub' />
-              </div>
-              <Fade up when={animate2}>
-                <div className = 'roadmap-section-title'>
-                  Alpha Hub
-                </div>
-                <div className='roadmap-section-body'>
-                  A multifacted platform to neurodive right into NFT alpha - analyse collections and engage socially.
                 </div>
               </Fade>
             </div>
