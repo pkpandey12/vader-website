@@ -19,7 +19,7 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import loomlogo from '../assets/white-loomlogo.svg'
 import { Icon } from '@mui/material';
 
-import Spin from 'react-reveal/Spin';
+import Swing from 'react-reveal/Swing';
 import MouseTooltip from 'react-sticky-mouse-tooltip';
 
 import discord from '../assets/discord.svg'
@@ -83,7 +83,7 @@ const NavBar = (props: any) => {
             >
               <DiscordIcon/>
             </IconButton>
-          <Spin when={logoHover}>
+          <Swing when={logoHover}>
             <img className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
                     scroller.scrollTo('streetview-navigator', {
@@ -93,7 +93,7 @@ const NavBar = (props: any) => {
                     )
                   }}
             />
-          </Spin>
+          </Swing>
           <IconButton
               size="large"
               edge="start"
