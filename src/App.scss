@@ -259,24 +259,19 @@
 }
 
 .tooltip-text {
-  font-family: 'Vollkorn SC', serif;
-  font-size: 2em;
-  cursor: pointer;
-  color: #000;
-  background-color: rgb(255, 255, 255, 1);
-  border: white 5px solid;
-  border-radius: 10%;
-  opacity: 80%;
+  font-family: 'Vollkorn SC', serif !important;
+  font-size: 2em !important;
+  cursor: pointer !important;
+  color: #000 !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 .tooltip-text-logo {
-  font-family: 'Vollkorn SC', serif;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #000;
-  background-color: rgb(255, 255, 255, 1);
-  border: white 5px solid;
-  border-radius: 10%;
-  opacity: 80%;
+  font-family: 'Vollkorn SC', serif !important;
+  font-size: 1.5em !important;
+  cursor: pointer !important;
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(0, 0, 0) !important;
+  opacity: 80% !important;
 }
 
 .mint-container {
@@ -530,7 +525,7 @@
 }
 
 // If screen is less than this aspect ratio, i.e. less than 16/9
-@media (max-aspect-ratio: 176/100){
+@media (max-aspect-ratio: 177/100){
   .background-loader {
     background-image: url('./assets/Street_Scene-min.png');
     background-position: center;
@@ -589,7 +584,7 @@
 
 }
 
-@media (min-aspect-ratio: 179/100){
+@media (min-aspect-ratio: 180/100){
 
 
 .expo-section-title {
@@ -597,7 +592,7 @@
   margin-bottom: 1vh;
   text-align: center;
   font-family: 'Vollkorn SC', serif;
-  font-size: 4rem;
+  font-size: 3vw;
 }
 
 .expo-section-body {
@@ -606,7 +601,7 @@
   text-align: justify;
   text-justify: auto;
   font-family: 'IM Fell English', serif;
-  font-size: 3vh;
+  font-size: 2.3vh;
   display: inline;
 }
 

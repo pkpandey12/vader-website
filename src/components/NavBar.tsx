@@ -20,7 +20,7 @@ import loomlogo from '../assets/white-loomlogo.svg'
 import { Icon } from '@mui/material';
 
 import Swing from 'react-reveal/Swing';
-import MouseTooltip from 'react-sticky-mouse-tooltip';
+
 
 import discord from '../assets/discord.svg'
 
@@ -67,13 +67,7 @@ const NavBar = (props: any) => {
 
           
           <Box alignItems="center" justifyContent="center" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          <MouseTooltip
-                    visible={logoHover}
-                    offsetX={15}
-                    offsetY={10}
-                  >
-                    <span className="tooltip-text-logo">The Street</span>
-                  </MouseTooltip>
+
                   <IconButton
               size="large"
               edge="end"
@@ -84,7 +78,7 @@ const NavBar = (props: any) => {
               <DiscordIcon/>
             </IconButton>
           <Swing when={logoHover}>
-            <img className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
+            <img data-tip="The Street" className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
                     scroller.scrollTo('streetview-navigator', {
                       duration: 500,

@@ -13,6 +13,7 @@ import Mint from './components/Mint';
 import Roadmap from './components/Roadmap';
 
 import { useDispatch, useSelector } from 'react-redux';
+import ReactTooltip from 'react-tooltip';
 
 
 const App = () => {
@@ -117,6 +118,8 @@ const App = () => {
       }
       <CssBaseline/>
       <div id='container' ref={container}>
+      <ReactTooltip place="bottom"  effect="float" className="tooltip-text-logo"/>
+
         {showCover &&
           <Navbar
           mintable={false}
@@ -138,6 +141,7 @@ const App = () => {
         {showCover &&
         <Roadmap/>
         }
+             
 
     </div>
     </div>

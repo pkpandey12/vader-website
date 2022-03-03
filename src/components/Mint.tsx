@@ -1,6 +1,5 @@
 import React from 'react';
 
-import MouseTooltip from 'react-sticky-mouse-tooltip';
 import GlitchClip from 'react-glitch-effect/core/GlitchClip';
 
 const Mint = () => {
@@ -43,7 +42,7 @@ const Mint = () => {
   return(
     <div id="mint-anchor" >
     <div className='mint-container'>
-      <div id='left-mint' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
+      <div data-tip="Coming Soon!" id='left-mint' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
          <GlitchClip>
         {
         setMessage()
@@ -51,13 +50,6 @@ const Mint = () => {
         </GlitchClip>
       </div>
     </div>
-    <MouseTooltip
-                    visible={showTooltip}
-                    offsetX={15}
-                    offsetY={10}
-                  >
-                    <span className="tooltip-text">Coming Soon!</span>
-    </MouseTooltip>
     </div>
   )
 }
