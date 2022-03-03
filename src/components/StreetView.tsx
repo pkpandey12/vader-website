@@ -64,6 +64,7 @@ const StreetView = (props?: any) => {
               )
             }}
             id='street-sec' data-tip="Roadmap" onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl' : "bar-section") : ''}>
+              
             </div>
             </div>
             <ReactTooltip place="bottom"  effect="float" className="tooltip-text-logo"/>
