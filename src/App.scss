@@ -212,10 +212,9 @@
 }
 
 #exposition-container {
-  width: 33 vw;
-  height: 75vh;
   background-color: rgb(0, 0, 0, 0);
   margin: auto;
+  vertical-align: middle;
 }
 
 #exposition-headline {
@@ -607,7 +606,7 @@
   text-align: justify;
   text-justify: auto;
   font-family: 'IM Fell English', serif;
-  font-size: 2rem;
+  font-size: 3vh;
   display: inline;
 }
 
