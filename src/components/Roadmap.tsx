@@ -17,15 +17,15 @@ const Roadmap = (props?: any) => {
   const conciser = (index: number) => {
     switch(index) {
       case 0:
-        return animate0 ? '/images/Roadmap-Game_Gif.gif' : '/images/Roadmap_-_Game_Gif-1-_dragged_.png'
+        return animate0 ? '/images/roadmap02.gif' : '/images/Roadmap_-_Game_Gif-1-_dragged_.png'
       case 1:
-        return animate1 ? '/images/Roadmap-Merch_Store_Gif.gif' : '/images/Roadmap_-_Merch_Store_Gif-1-_dragged_.png'
+        return animate1 ? '/images/roadmap05.gif' : '/images/Roadmap_-_Merch_Store_Gif-1-_dragged_.png'
       case 2:
-        return animate2 ? '/images/Roadmap-Alpha_Hub_Gif.gif' : '/images/Roadmap-Alpha_Hub_Gif-1-_dragged_.png'
+        return animate2 ? '/images/roadmap01.gif' : '/images/Roadmap-Alpha_Hub_Gif-1-_dragged_.png'
       case 3:
-        return animate3 ? '/images/Roadmap-Loomverse_Gif.gif' : '/images/Roadmap_-_Loomverse_Gif-1-_dragged_.png'
+        return animate3 ? '/images/roadmap03.gif' : '/images/Roadmap_-_Loomverse_Gif-1-_dragged_.png'
       case 4:
-        return animate4 ? '/images/Roadmap-Media_Gif.gif' : '/images/Roadmap_-_Media_Gif-1-3-_dragged_.png'
+        return animate4 ? '/images/roadmap04.gif' : '/images/Roadmap_-_Media_Gif-1-3-_dragged_.png'
     }
   }
 
