@@ -73,7 +73,7 @@ const NavBar = (props: any) => {
               edge="end"
               aria-label="discord"
               color="inherit"
-              onClick={()=> window.open(`https://discord.gg/PwFK7s6b`, "_blank")}
+              onClick={()=> window.open(`https://discord.gg/fvHCpScMUg`, "_blank")}
             >
               <DiscordIcon/>
             </IconButton>

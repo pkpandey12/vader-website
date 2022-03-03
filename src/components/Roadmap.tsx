@@ -50,7 +50,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
               <div className="roadmap-section-image-container">
-                <img className='roadmap-section-image' src={conciser(2)} alt='alpha hub' />
+                <div className='roadmap-section-image-01'> </div>
               </div>
               <Fade up when={animate2}>
                 <div className = 'roadmap-section-title'>
@@ -67,7 +67,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
               <div className="roadmap-section-image-container">
-                <img className='roadmap-section-image' src={conciser(0)} alt='video game'/>
+              <div className='roadmap-section-image-02'> </div>
               </div>
               <Fade up when={animate0}>
                 <div className = 'roadmap-section-title'>
@@ -86,7 +86,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
               <div className="roadmap-section-image-container">
-                <img className='roadmap-section-image' src={conciser(1)} alt='merch store' />
+              <div className='roadmap-section-image-03'> </div>
               </div>
               <Fade up when={animate1}>
                 <div className = 'roadmap-section-title'>
@@ -105,7 +105,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
             <div className="roadmap-section-image-container">
-                <img className='roadmap-section-image' src={conciser(3)} alt='loomverse' />
+            <div className='roadmap-section-image-04'> </div>
               </div>
               <Fade up when={animate3}>
                 <div className = 'roadmap-section-title'>
@@ -124,7 +124,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
               <div className="roadmap-section-image-container">
-                <img className='roadmap-section-image' src={conciser(4)} alt='media' />
+              <div className='roadmap-section-image-05'> </div>
               </div>
               <Fade up when={animate4}>
                 <div className = 'roadmap-section-title'>

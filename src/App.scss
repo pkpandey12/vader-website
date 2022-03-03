@@ -454,9 +454,69 @@
   justify-content: center;
 }
 
-.roadmap-section-image {
-  width: 98%;
+.roadmap-section-image-01 {
+  width: 19vw;
+  height: 33vh;
   margin: auto;
+  background-image: url('./assets/roadmap01-static.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    background-image: url('./assets/roadmap01.gif')
+  }
+}
+
+.roadmap-section-image-02 {
+  width: 19vw;
+  height: 33vh;
+  margin: auto;
+  background-image: url('./assets/roadmap02-static.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    background-image: url('./assets/roadmap02.gif')
+  }
+}
+
+.roadmap-section-image-03 {
+  width: 19vw;
+  height: 33vh;
+  margin: auto;
+  background-image: url('./assets/roadmap03-static.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    background-image: url('./assets/roadmap03.gif')
+  }
+}
+
+.roadmap-section-image-04 {
+  width: 19vw;
+  height: 33vh;
+  margin: auto;
+  background-image: url('./assets/roadmap04-static.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    background-image: url('./assets/roadmap04.gif')
+  }
+}
+
+.roadmap-section-image-05 {
+  width: 19vw;
+  height: 33vh;
+  margin: auto;
+  background-image: url('./assets/roadmap05-static.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:hover {
+    background-image: url('./assets/roadmap05.gif')
+  }
 }
 
 /* Stars 
