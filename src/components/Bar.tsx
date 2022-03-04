@@ -69,6 +69,7 @@ const Bar = () => {
         <div id='bar-rest-sec' className={isSectionActive(3) && expo?'focus-left-sec': ''} 
           style={{opacity: expo && (!isSectionActive(1) || !isSectionActive(2) || !isSectionActive(3))? '100%' : '0%'}}
           onMouseEnter={()=>setExpo(false)} onMouseLeave={()=>setExpo(true)}>
+            <Box alignItems={"centre"} justifyContent="space-around" flexDirection="column">
             <div id="exposition-container-container">
               <Fade when={expo}>
                 <Box alignItems="center" justifyContent="space-around" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -156,6 +157,7 @@ const Bar = () => {
                 </Box>
               </Fade>
             </div>
+            </Box>
         </div>
       </div>
     </div>
