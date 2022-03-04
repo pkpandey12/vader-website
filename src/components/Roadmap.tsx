@@ -21,11 +21,11 @@ const Roadmap = (props?: any) => {
       case 1:
         return !animate1 ? '/images/roadmap05.gif' : '/images/Roadmap_-_Merch_Store_Gif-1-_dragged_.png'
       case 2:
-        return !animate2 ? '/images/roadmap01.gif' : '/images/Roadmap-Alpha_Hub_Gif-1-_dragged_.png'
+        return !animate2 ? '/images/roadmap04.gif' : '/images/Roadmap-Alpha_Hub_Gif-1-_dragged_.png'
       case 3:
-        return !animate3 ? '/images/roadmap03.gif' : '/images/Roadmap_-_Loomverse_Gif-1-_dragged_.png'
+        return !animate3 ? '/images/roadmap01.gif' : '/images/Roadmap_-_Loomverse_Gif-1-_dragged_.png'
       case 4:
-        return !animate4 ? '/images/roadmap04.gif' : '/images/Roadmap_-_Media_Gif-1-3-_dragged_.png'
+        return !animate4 ? '/images/roadmap03.gif' : '/images/Roadmap_-_Media_Gif-1-3-_dragged_.png'
     }
   }
 
@@ -86,7 +86,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
               <div className="roadmap-section-image-container">
-              <div className='roadmap-section-image-03'> </div>
+              <div className='roadmap-section-image-05'> </div>
               </div>
               <Fade up when={animate1}>
                 <div className = 'roadmap-section-title'>
@@ -105,7 +105,7 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
             <div className="roadmap-section-image-container">
-            <div className='roadmap-section-image-04'> </div>
+            <div className='roadmap-section-image-03'> </div>
               </div>
               <Fade up when={animate3}>
                 <div className = 'roadmap-section-title'>
@@ -124,14 +124,14 @@ const Roadmap = (props?: any) => {
                 </div>
               </Fade>
               <div className="roadmap-section-image-container">
-              <div className='roadmap-section-image-05'> </div>
+              <div className='roadmap-section-image-04'> </div>
               </div>
               <Fade up when={animate4}>
                 <div className = 'roadmap-section-title'>
-                  Stories
+                  & More
                 </div>
                 <div className='roadmap-section-body'>
-                  Tantalus is in flux - hear its stories with us. Graphic novels, animation and music, inspired by the Loom.
+                  Tantalus is in flux - and our mission is to bring together everyone to experience it. We'll work as a community to decide what's next.
                 </div>
               </Fade> 
             </div>

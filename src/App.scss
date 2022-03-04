@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=DM+Serif+Display:ital@1&family=DotGothic16&family=IM+Fell+English:ital@1&family=Lemonada:wght@500&family=Poppins:wght@700&family=Rajdhani:wght@600&family=Reem+Kufi:wght@500&family=VT323&family=Vollkorn+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Black+Han+Sans&family=Cormorant+Garamond&family=DotGothic16&family=IM+Fell+English:ital@1&family=Rajdhani:wght@600&family=Reem+Kufi:wght@500&family=VT323&family=Vidaloka&family=Vollkorn+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 .section {
   height: 100vh;
   color: magenta;
@@ -20,7 +22,6 @@
   height: 100vh;
   background-color: #000000;
   display: inline-flex;
-  position: relative;
 }
 
 #left-door {
@@ -127,6 +128,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    background-attachment: fixed;
   }
 }
 
@@ -136,6 +138,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+
   }
 }
 
@@ -145,6 +149,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+
   }
 }
 
@@ -410,15 +416,13 @@
 .roadmap-section-body {
   margin-left: 1vw;
   margin-right: 1vw;
-  text-align: justify;
-  text-justify: auto;
-  font-family: 'IM Fell English', serif;
+  text-align: center;
+  font-family: 'Bellefair', serif;
   font-size: 1.5em;
 }
 
 .expo-section-title {
   margin-top: 2vh;
-  margin-bottom: 1vh;
   text-align: center;
   font-family: 'Vollkorn SC', serif;
   font-size: 3.5vw;
@@ -429,7 +433,7 @@
   margin-right: 1vw;
   text-align: justify;
   text-justify: auto;
-  font-family: 'IM Fell English', serif;
+  font-family: 'Bellefair', 'Courier New', serif;
   font-size: 1.4vw;
   display: inline;
 }
@@ -453,7 +457,7 @@
 .roadmap-section-image-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: end;
 }
 
 .roadmap-section-image-01 {
@@ -587,7 +591,7 @@
 }
 
 // If screen is less than this aspect ratio, i.e. less than 16/9
-@media (max-aspect-ratio: 177/100){
+@media (max-aspect-ratio: 176/100){
   .background-loader {
     background-image: url('./assets/Street_Scene-min.png');
     background-position: center;
@@ -662,7 +666,7 @@
   margin-right: 1vw;
   text-align: justify;
   text-justify: auto;
-  font-family: 'IM Fell English', serif;
+  font-family: 'Bellefair', serif;
   font-size: 2.3vh;
   display: inline;
 }
@@ -712,40 +716,6 @@
 
 }
 
-@media (aspect-ratio: 16/9){
-  .background-loader {
-    background-image: url('./assets/Street_Scene-min.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment:fixed ;
-  }
-
-  #street-sec {
-    width: 33.33vw; 
-    height: 100vh;
-  }
-.bar-section {
-  width: 33.33vw; 
-  height: 100vh;
-  background-image: url('./assets/Street_Scene_Lightup_1-min.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment:fixed ;
-}
-
-.bar-section-xl {
-  width: 33.33vw; 
-  height: 100vh;
-  background-image: url('./assets/Street_Scene_Lightup_2-min.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment:fixed ;
-}
-
-}
 
 .image-root {
   // text-align: center;

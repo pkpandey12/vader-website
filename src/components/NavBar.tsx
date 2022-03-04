@@ -23,6 +23,7 @@ import Swing from 'react-reveal/Swing';
 
 
 import discord from '../assets/discord.svg'
+import twitter from '../assets/twitter.svg'
 
 
 function DiscordIcon() {
@@ -31,6 +32,14 @@ function DiscordIcon() {
       <img className='image-icon' alt='discord' src={discord}/>
     </Icon>
   );
+}
+
+function TwitterIcon() {
+  return(
+    <Icon className='image-root'>
+      <img className='image-icon' alt='twitter' src={twitter}/>
+    </Icon>
+  )
 }
 
 
@@ -66,19 +75,21 @@ const NavBar = (props: any) => {
         <Toolbar disableGutters>
 
           
-          <Box alignItems="center" justifyContent="center" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box alignItems="center" justifyContent="space-around" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
-                  <IconButton
+          <IconButton
               size="large"
-              edge="end"
-              aria-label="discord"
+              edge="start"
+              aria-label="metamask"
               color="inherit"
-              onClick={()=> window.open(`https://discord.gg/fvHCpScMUg`, "_blank")}
+              onClick={()=>connectWalletPressed()}
             >
-              <DiscordIcon/>
+              <AccountBalanceWalletIcon/>
+              
             </IconButton>
+                  
           <Swing when={logoHover}>
-            <img data-tip="The Street" className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
+            <img className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
                     scroller.scrollTo('streetview-navigator', {
                       duration: 500,
@@ -88,15 +99,26 @@ const NavBar = (props: any) => {
                   }}
             />
           </Swing>
-          <IconButton
+          <Box>        
+            <IconButton
               size="large"
-              edge="start"
-              aria-label="metamask"
+              edge="end"
+              aria-label="discord"
               color="inherit"
-              onClick={()=>connectWalletPressed()}
+              onClick={()=> window.open(`https://discord.gg/fvHCpScMUg`, "_blank")}
             >
-              <AccountBalanceWalletIcon/>
+              <DiscordIcon/>
             </IconButton>
+            <IconButton
+              size="large"
+              edge="end"
+              aria-label="discord"
+              color="inherit"
+              onClick={()=> window.open(`https://twitter.com/TheLoomSociety`, "_blank")}
+            >
+              <TwitterIcon/>
+            </IconButton>
+            </Box>
           </Box>
           
         </Toolbar>

@@ -51,13 +51,13 @@ const Bar = () => {
         </div>
         {/* section 3 */}
         <div id='bar-sec-3'
-        onClick={()=>{
-          scroller.scrollTo('mint-anchor', {
-            duration: 500,
-            delay: 100,
-            smooth: true}
-          )
-        }}
+        // onClick={()=>{
+        //   scroller.scrollTo('mint-anchor', {
+        //     duration: 500,
+        //     delay: 100,
+        //     smooth: true}
+        //   )
+        // }}
         className={isSectionActive(2)?'focus-left': ''} onMouseEnter={()=>setChangeBackground({
           sec1: '80%',
           sec2: '80%',

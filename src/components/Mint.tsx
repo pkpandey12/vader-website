@@ -2,6 +2,8 @@ import React from 'react';
 
 import GlitchClip from 'react-glitch-effect/core/GlitchClip';
 
+import { Tooltip } from '@mui/material';
+
 const Mint = () => {
 
   const [truth, setTruth] = React.useState(0);
@@ -21,7 +23,7 @@ const Mint = () => {
       case 0:
         return <div style={{fontFamily: 'VT323, monospace', fontSize: '25vw'}}>OTW</div>
       case 1:
-        return <div style={{fontFamily: 'Poppins, sans-serif', fontSize: '10vw'}}>जल्द ही</div>
+        return <div style={{fontFamily: 'Hind, sans-serif', fontSize: '10vw'}}>जल्द ही</div>
       case 2:
         return  <div style={{fontFamily: 'Black Han Sans, sans-serif', fontSize: '10vw'}}>곧 출시</div>
       case 3:
@@ -42,13 +44,15 @@ const Mint = () => {
   return(
     <div id="mint-anchor" >
     <div className='mint-container'>
-      <div data-tip="Coming Soon!" id='left-mint' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
-         <GlitchClip>
-        {
-        setMessage()
-        }
-        </GlitchClip>
-      </div>
+      <Tooltip followCursor title='Coming Soon!'>
+        <div data-tip="Coming Soon!" id='left-mint' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)}>
+          <GlitchClip>
+          {
+          setMessage()
+          }
+          </GlitchClip>
+        </div>
+      </Tooltip>
     </div>
     </div>
   )

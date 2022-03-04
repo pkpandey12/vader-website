@@ -33,7 +33,7 @@ const ElevatorDoors = (props?:any) => {
             )}, 1000);
             setTimeout(function(){
               props?.func(false);
-            },5000); 
+            },15000); 
             }}>
           </div>
         </Zoom>

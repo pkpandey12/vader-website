@@ -32,18 +32,24 @@ const App = () => {
 
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        typography: {
-          "fontFamily": `font-family: 'Vollkorn SC', serif`,
-        },
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  );
+  const theme = createTheme({
+    palette: {
+      mode: 'dark'
+    },
+    components: {
+      MuiTooltip: {
+        styleOverrides: {
+          tooltip: {
+            fontFamily: "Vollkorn SC, serif",
+            fontSize: "1.5em",
+            cursor: "pointer",
+            color: "rgb(255, 255, 255)",
+            backgroundColor: "rgba(0, 0, 0,0.75)",
+          }
+        }
+      }
+    }
+  })
 
 
   const fromChildSetElevator = (val: boolean) => {
@@ -113,12 +119,11 @@ const App = () => {
             </Button>
           </DialogActions>
         </Dialog>
-      {showElevator &&
+      {/* {showElevator &&  */}
         <ElevatorDoors func={fromChildSetElevator} func2={fromChildShowCoverOnStreet}/>
-      }
+      {/* } */}
       <CssBaseline/>
       <div id='container' ref={container}>
-      <ReactTooltip place="bottom"  effect="float" className="tooltip-text-logo"/>
 
         {showCover &&
           <Navbar
