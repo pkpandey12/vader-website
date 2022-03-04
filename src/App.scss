@@ -12,6 +12,7 @@
 
 .app-container {
   background-color: #000000;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
 }
 
 #elevator-container {
@@ -403,6 +404,7 @@
   text-align: center;
   font-family: 'Vollkorn SC', serif;
   font-size: 2.5em;
+  word-wrap:normal;
 }
 
 .roadmap-section-body {
@@ -455,65 +457,65 @@
 }
 
 .roadmap-section-image-01 {
-  width: 19vw;
+  width: 98%;
   height: 33vh;
   margin: auto;
   background-image: url('./assets/roadmap01-static.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   &:hover {
     background-image: url('./assets/roadmap01.gif')
   }
 }
 
 .roadmap-section-image-02 {
-  width: 19vw;
+  width: 98%;
   height: 33vh;
   margin: auto;
   background-image: url('./assets/roadmap02-static.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   &:hover {
     background-image: url('./assets/roadmap02.gif')
   }
 }
 
 .roadmap-section-image-03 {
-  width: 19vw;
+  width: 98%;
   height: 33vh;
   margin: auto;
   background-image: url('./assets/roadmap03-static.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   &:hover {
     background-image: url('./assets/roadmap03.gif')
   }
 }
 
 .roadmap-section-image-04 {
-  width: 19vw;
+  width: 98%;
   height: 33vh;
   margin: auto;
   background-image: url('./assets/roadmap04-static.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   &:hover {
     background-image: url('./assets/roadmap04.gif')
   }
 }
 
 .roadmap-section-image-05 {
-  width: 19vw;
+  width: 98%;
   height: 33vh;
   margin: auto;
   background-image: url('./assets/roadmap05-static.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   &:hover {
     background-image: url('./assets/roadmap05.gif')
   }
@@ -670,7 +672,7 @@
   margin-right: 1vw;
   text-align: center;
   font-family: 'DM Serif Display', serif;
-  font-size: 1.75rem;
+  font-size: 2vh;
   color: rgb(135, 135, 135);
 }
 

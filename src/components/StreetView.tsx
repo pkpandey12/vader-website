@@ -42,7 +42,8 @@ const StreetView = (props?: any) => {
                 delay: 100,
                 smooth: true}
               )
-            }} data-tip="Mint" className="street-sec-adjustor"><div id='street-sec' onMouseEnter={()=>setMintXL(true)} onMouseLeave={()=>setMintXL(false)} className={mintXL? (rand? 'bar-section-xl' : "bar-section") : ''}>
+            }} data-tip="Mint" className="street-sec-adjustor"><div id='street-sec' onMouseEnter={()=>setMintXL(true)} onMouseLeave={()=>setMintXL(false)} className={mintXL? (rand? 'bar-section-xl' : "bar-section") : ''}
+            style={{backgroundPosition: 'left'}}>
             </div>
             </div>
             <div className="street-sec-adjustor">
@@ -52,7 +53,8 @@ const StreetView = (props?: any) => {
                 delay: 100,
                 smooth: true}
               )
-            }}id='street-sec' data-tip="About" onMouseEnter={()=>setBarXL(true)} onMouseLeave={()=>setBarXL(false)} className={barXL? (rand? 'bar-section-xl' : "bar-section") : ''}>
+            }}id='street-sec' data-tip="About" onMouseEnter={()=>setBarXL(true)} onMouseLeave={()=>setBarXL(false)} className={barXL? (rand? 'bar-section-xl' : "bar-section") : ''}
+            >
             </div>
             </div>
             <div className="street-sec-adjustor">
@@ -63,7 +65,8 @@ const StreetView = (props?: any) => {
                 smooth: true}
               )
             }}
-            id='street-sec' data-tip="Roadmap" onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl' : "bar-section") : ''}>
+            id='street-sec' data-tip="Roadmap" onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl' : "bar-section") : ''}
+            style={{backgroundPosition: 'right'}}>
               
             </div>
             </div>

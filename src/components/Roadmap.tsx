@@ -109,7 +109,7 @@ const Roadmap = (props?: any) => {
               </div>
               <Fade up when={animate3}>
                 <div className = 'roadmap-section-title'>
-                  Loomverse
+                  Loom-verse
                 </div>
                 <div className='roadmap-section-body'>
                   A metaverse experience, the true Loom Society. Explore the Loomverse and meet its inhabitants.
