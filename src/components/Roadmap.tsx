@@ -131,7 +131,7 @@ const Roadmap = (props?: any) => {
                   & More
                 </div>
                 <div className='roadmap-section-body'>
-                  Tantalus is in flux - and our mission is to bring together everyone to experience it. We'll work as a community to decide what's next.
+                  The Future is glorious! We'll work as a community to decide what's next.
                 </div>
               </Fade> 
             </div>
