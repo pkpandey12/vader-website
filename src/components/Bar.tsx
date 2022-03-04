@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 import Fade from 'react-reveal/Fade';
 import {scroller} from "react-scroll";
@@ -70,8 +71,9 @@ const Bar = () => {
           onMouseEnter={()=>setExpo(false)} onMouseLeave={()=>setExpo(true)}>
             <div id="exposition-container-container">
               <Fade when={expo}>
+                <Box alignItems="center" justifyContent="space-around" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 <div id='exposition-container'>
-                  
+                 <Box alignContent={'center'} justifyContent={'center'}>
                 <div className = 'expo-section-title'>
                   {isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
                   <Fade>
@@ -91,7 +93,8 @@ const Bar = () => {
                   </Fade>
                   }
                 </div>
-                
+                </Box> 
+                <Box>
                 <div className='expo-section-body'>
                 {isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
                   <Fade>
@@ -123,7 +126,7 @@ const Bar = () => {
                   </Fade>
                   }
                 </div>
-
+                </Box>
                 <div className='expo-section-quote'>
                   {
                   isSectionActive(1) && (!isSectionActive(2) && !isSectionActive(3)) && expo && 
@@ -148,6 +151,7 @@ const Bar = () => {
                   }
                   </div>
                 </div>
+                </Box>
               </Fade>
             </div>
         </div>

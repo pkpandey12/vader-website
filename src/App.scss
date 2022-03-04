@@ -21,6 +21,9 @@
   width: 100vw;
   height: 100vh;
   background-color: #000000;
+  background-image: url('./assets/Julian.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: inline-flex;
 }
 
@@ -422,15 +425,15 @@
 }
 
 .expo-section-title {
-  margin-top: 2vh;
+  // margin-top: 2vh;
   text-align: center;
   font-family: 'Vollkorn SC', serif;
   font-size: 3.5vw;
 }
 
 .expo-section-body {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  // margin-left: 1vw;
+  // margin-right: 1vw;
   text-align: justify;
   text-justify: auto;
   font-family: 'Bellefair', 'Courier New', serif;
@@ -439,8 +442,8 @@
 }
 
 .expo-section-quote {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  // margin-left: 1vw;
+  // margin-right: 1vw;
   text-align: center;
   font-family: 'DM Serif Display', serif;
   font-size: 1.2vw;
@@ -592,6 +595,7 @@
 
 // If screen is less than this aspect ratio, i.e. less than 16/9
 @media (max-aspect-ratio: 176/100){
+
   .background-loader {
     background-image: url('./assets/Street_Scene-min.png');
     background-position: center;
@@ -652,18 +656,30 @@
 
 @media (min-aspect-ratio: 180/100){
 
+  .elevator-button {
+
+  height: 10.01vw;
+  width: 8.294vw;
+  margin-top: 50vh;
+  }
+
+  .button-container {
+    position: absolute;
+    top: -4.2vw;
+  }
+
 
 .expo-section-title {
-  margin-top: 2vh;
-  margin-bottom: 1vh;
+  // margin-top: 2vh;
+  // margin-bottom: 1vh;
   text-align: center;
   font-family: 'Vollkorn SC', serif;
   font-size: 3vw;
 }
 
 .expo-section-body {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  // margin-left: 1vw;
+  // margin-right: 1vw;
   text-align: justify;
   text-justify: auto;
   font-family: 'Bellefair', serif;
@@ -672,8 +688,8 @@
 }
 
 .expo-section-quote {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  // margin-left: 1vw;
+  // margin-right: 1vw;
   text-align: center;
   font-family: 'DM Serif Display', serif;
   font-size: 2vh;
