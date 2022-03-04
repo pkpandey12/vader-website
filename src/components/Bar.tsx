@@ -103,6 +103,7 @@ const Bar = () => {
                     <br/>
                     Along with infinite resources, beings of extraordinary, godlike power began seeping through the cracks. They were 
                     simultaneously created by the loom and driven to seek it out. In their eyes, they had lived full lives, and this Loom had ripped their universes asunder.
+                    <br/>
                   </Fade>
                   }
                   {isSectionActive(2) && (!isSectionActive(1) && !isSectionActive(3)) && expo && 
@@ -111,6 +112,7 @@ const Bar = () => {
                     The raiders now live in a comparitively egalitarian society, where all of their exotic existences have made Tantalus the heart of metaversal culture.
                     <br/>
                     There are 54 species with different versions from various timelines. Some of them have rare Titan genes that set them apart from their peers. The universe has been painstakingly handmade for your tactical reference.
+                    <br/>
                   </Fade>
                   }
                   {isSectionActive(3) && (!isSectionActive(2) && !isSectionActive(1)) && expo && 
