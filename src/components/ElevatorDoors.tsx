@@ -9,7 +9,7 @@ const ElevatorDoors = (props?:any) => {
   const [doorsOpen, setDoorsOpen] = useState(false);
 
   return(
-    <div id="elevator-container" style={{opacity: doorsOpen? '100%' : '0%'}}>
+    <div id="elevator-container">
     
       <Fade left when={!doorsOpen}>
       <div id="left-door">
