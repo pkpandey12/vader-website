@@ -74,8 +74,8 @@ const NavBar = (props: any) => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          
-          <Box alignItems="center" justifyContent="space-around" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box alignItems="center" width="100vw" justifyContent="space-evenly" sx={{ display:'flex' }}>
+          <Box alignItems="center" width="31.2vw" justifyContent="right" sx={{display:'flex' }}>
 
           <IconButton
               size="large"
@@ -87,7 +87,8 @@ const NavBar = (props: any) => {
               <AccountBalanceWalletIcon/>
               
             </IconButton>
-                  
+          </Box>
+          <Box alignItems="center" width="34vw" justifyContent="center" sx={{ display:'flex' }}>       
           <Swing when={logoHover}>
             <img className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
@@ -99,7 +100,8 @@ const NavBar = (props: any) => {
                   }}
             />
           </Swing>
-          <Box>        
+          </Box>
+          <Box alignItems="center" width="33vw" justifyContent="left" sx={{ display:'flex' }}>        
             <IconButton
               size="large"
               edge="end"
