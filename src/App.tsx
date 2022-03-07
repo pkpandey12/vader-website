@@ -76,6 +76,7 @@ const App = () => {
       setWidth(window.innerWidth);
   }
   useEffect(() => {
+      // window.scrollTo(0,0);
       window.addEventListener('resize', handleWindowSizeChange);
       return () => {
           window.removeEventListener('resize', handleWindowSizeChange);
@@ -87,7 +88,7 @@ const App = () => {
 
   useScrollSnap({ ref: container, duration: 200, delay: 0 });
 
-  // document.body.style.overflow = "hidden";
+  document.body.style.overflow = showCover? "scroll" : "hidden";
 
   useEffect( () => {
     console.log(scrollSpy.currentPositionY);
@@ -125,27 +126,25 @@ const App = () => {
       <CssBaseline/>
       <div id='container' ref={container}>
 
-        {showCover &&
+        <div style={{opacity: showCover? '100%':'0%'}}>
           <Navbar
           mintable={false}
           setIsOpen={fromChildOpenModal}
           setWallet={fromChildSetWallet}
           walletAddress={walletAddress}
           />
-        }
-        { showCover &&
+
         <StreetView
           setIsOpen={fromChildOpenModal}/>
-        }
-        {showCover &&
-          <Bar/>}
 
-        {showCover && 
+          <Bar/>
+
            <Mint/>
-          }
-        {showCover &&
+
+
         <Roadmap/>
-        }
+        </div>
+        
              
 
     </div>
