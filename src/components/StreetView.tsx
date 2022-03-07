@@ -54,7 +54,7 @@ const StreetView = (props?: any) => {
               )
             }} data-tip="Mint" className="street-sec-adjustor">
               <Tooltip followCursor title="Mint">
-              <div id='street-sec' onMouseEnter={()=>setMintXL(true)} onMouseLeave={()=>setMintXL(false)} className={mintXL? (rand? 'bar-section-xl' : "bar-section") : ''}
+              <div id='street-sec' onMouseEnter={()=>setMintXL(true)} onMouseLeave={()=>setMintXL(false)} className={mintXL? (rand? 'bar-section-xl-1' : "bar-section-1") : ''}
             style={{backgroundPosition: 'left'}}>
             </div>
             </Tooltip>
@@ -67,7 +67,7 @@ const StreetView = (props?: any) => {
                 delay: 100,
                 smooth: true}
               )
-            }}id='street-sec' data-tip="About" onMouseEnter={()=>setBarXL(true)} onMouseLeave={()=>setBarXL(false)} className={barXL? (rand? 'bar-section-xl' : "bar-section") : ''}
+            }}id='street-sec' data-tip="About" onMouseEnter={()=>setBarXL(true)} onMouseLeave={()=>setBarXL(false)} className={barXL? (rand? 'bar-section-xl-2' : "bar-section-2") : ''}
             >
             </div>
             </Tooltip>
@@ -81,7 +81,7 @@ const StreetView = (props?: any) => {
                   smooth: true}
                 )
               }}
-              id='street-sec' data-tip="Roadmap" onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl' : "bar-section") : ''}
+              id='street-sec' data-tip="Roadmap" onMouseEnter={()=>setRoadmapXL(true)} onMouseLeave={()=>setRoadmapXL(false)} className={roadmapXL? (rand? 'bar-section-xl-3' : "bar-section-3") : ''}
               style={{backgroundPosition: 'right'}}>
                 
               </div>

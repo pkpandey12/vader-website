@@ -71,11 +71,11 @@ const NavBar = (props: any) => {
 
   return (
     <AppBar style={{ background: 'transparent', boxShadow: 'none'}}>
-      <Container maxWidth="xl">
+      <Container maxWidth={'xl'}>
         <Toolbar disableGutters>
 
-          <Box alignItems="center" width="100vw" justifyContent="space-evenly" sx={{ display:'flex' }}>
-          <Box alignItems="center" width="31.2vw" justifyContent="right" sx={{display:'flex' }}>
+          <Box alignItems="center" justifyContent="space-around" sx={{ display:'flex' , flexGrow: '1' }}>
+          <Box alignItems="center" justifyContent="right" sx={{display:'flex' }}>
 
           <IconButton
               size="large"
@@ -87,8 +87,20 @@ const NavBar = (props: any) => {
               <AccountBalanceWalletIcon/>
               
             </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              aria-label="metamask"
+              color="inherit"
+              disabled
+              aria-disabled
+              sx={{opacity: '0'}}
+            >
+              <AccountBalanceWalletIcon/>
+              
+            </IconButton>
           </Box>
-          <Box alignItems="center" width="34vw" justifyContent="center" sx={{ display:'flex' }}>       
+          <Box alignItems="center" justifyContent="center" sx={{ display:'flex' }}>       
           <Swing when={logoHover}>
             <img className='logo-icon' alt='loomlogo' src={loomlogo} onMouseEnter={()=>setLogoHover(true)} onMouseLeave={()=>setLogoHover(false)} onClick={()=>{
                     handleCloseNavMenu();
@@ -101,7 +113,7 @@ const NavBar = (props: any) => {
             />
           </Swing>
           </Box>
-          <Box alignItems="center" width="33vw" justifyContent="left" sx={{ display:'flex' }}>        
+          <Box alignItems="center" justifyContent="left" sx={{ display:'flex' }}>        
             <IconButton
               size="large"
               edge="end"

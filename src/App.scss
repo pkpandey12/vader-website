@@ -31,10 +31,10 @@
 #left-door {
   height: inherit;
   width: 50vw;
-  background-image: url('./assets/Elevator_Scene_No_Button-min.png');
-  background-position: center;
+  background-image: url('./assets/elevator1.png');
+  background-position: left center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 50vw auto;
   background-attachment:fixed ;
 }
 
@@ -42,10 +42,10 @@
   height: inherit;
   width: 50vw;
   position:relative;
-  background-image: url('./assets/Elevator_Scene_No_Button-min.png');
-  background-position: center;
+  background-image: url('./assets/elevator2.png');
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 50vw auto;
   background-attachment: fixed;
 }
 
@@ -249,22 +249,64 @@
   height: 100vh;
 }
 
-.bar-section {
+.bar-section-1 {
   width: 33.33vw; 
   height: 100vh;
-  background-image: url('./assets/Street_Scene_Lightup_1-min.png') !important;
-  background-position: center;
+  background-image: url('./assets/street1-l.png') !important;
+  background-position: left center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 33.33333vw auto;
+  cursor: pointer;
 }
 
-.bar-section-xl {
+.bar-section-xl-1 {
   width: 33.33vw; 
   height: 100vh;
-  background-image: url('./assets/Street_Scene_Lightup_2-min.png') !important;
-  background-position: center;
+  background-image: url('./assets/street1-xl.png') !important;
+  background-position: left center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 33.33333vw auto;
+  cursor: pointer;
+}
+
+.bar-section-2 {
+  width: 33.33vw; 
+  height: 100vh;
+  background-image: url('./assets/street2-l.png') !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 33.33333vw auto;
+  cursor: pointer;
+}
+
+.bar-section-xl-2 {
+  width: 33.33vw; 
+  height: 100vh;
+  background-image: url('./assets/street2-xl.png') !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 33.33333vw auto;
+  cursor: pointer;
+}
+
+.bar-section-3 {
+  width: 33.33vw; 
+  height: 100vh;
+  background-image: url('./assets/street3-l.png') !important;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 33.33333vw auto;
+  cursor: pointer;
+}
+
+.bar-section-xl-3 {
+  width: 33.33vw; 
+  height: 100vh;
+  background-image: url('./assets/street3-xl.png') !important;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 33.33333vw auto;
+  cursor: pointer;
 }
 
 .tooltip-text {
@@ -366,7 +408,7 @@
 
 }
 .logo-icon {
-  width: 10vw;
+  width: 7vw;
   cursor: pointer;
   &:hover {
     opacity: 100%;
@@ -609,26 +651,6 @@
     height: 56.25vw;
   }
 
-.bar-section {
-  width: 33.33vw; 
-  height: 56.25vw;
-  background-image: url('./assets/Street_Scene_Lightup_1-min.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
-
-.bar-section-xl {
-  width: 33.33vw; 
-  height: 56.25vw;
-  background-image: url('./assets/Street_Scene_Lightup_2-min.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
-
 .street-sec-adjustor{
   height: 100vh;
   width: 33.3333vw;
@@ -703,29 +725,6 @@
     // background-attachment:fixed ;
   }
 
-  #street-sec {
-    width: 33.33vw; 
-    height: 100vh;
-  }
-.bar-section {
-  width: 33.33vw; 
-  height: 100vh;
-  background-image: url('./assets/Street_Scene_Lightup_1-min.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
-
-.bar-section-xl {
-  width: 33.33vw; 
-  height: 100vh;
-  background-image: url('./assets/Street_Scene_Lightup_2-min.png') !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
-}
 
 }
 
@@ -737,4 +736,38 @@
 .image-icon {
   height: 95%;
   width: 95%;
+}
+
+
+@media (min-aspect-ratio: 250/100){
+
+.roadmap-section-date {
+  text-align: center;
+  font-size: 1rem;
+  font-family: 'DM Serif Display', serif;
+  opacity: 50%;
+}
+
+.roadmap-section-title {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  text-align: center;
+  font-family: 'Vollkorn SC', serif;
+  font-size: 1.5rem;
+  word-wrap:normal;
+}
+
+.roadmap-section-body {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-align: center;
+  font-family: 'Bellefair', serif;
+  font-size: 1rem;
+}
+
+.roadmap-section-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
 }
