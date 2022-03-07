@@ -1,3 +1,5 @@
+// © 2022 Praneet Kumar Pandey under MIT license
+
 import React, { useEffect, useRef, useState } from 'react';
 import { scrollSpy } from 'react-scroll';
 
